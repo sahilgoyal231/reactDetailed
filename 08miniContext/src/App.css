@@ -1,0 +1,150 @@
+:root {
+  --primary-glow: conic-gradient(from 180deg at 50% 50%, #16abff33 0deg, #0885ff33 55deg, #54d6ff33 120deg, #0071ff33 160deg, transparent 360deg);
+  --secondary-glow: radial-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+  background: #0a0a0a;
+  color: #fff;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* --- THE LOGOS --- */
+.logo {
+  height: 7em;
+  padding: 1.5em;
+  will-change: transform, filter;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.1));
+}
+
+.logo:hover {
+  transform: scale(1.1) translateY(-10px);
+  filter: drop-shadow(0 0 3em #646cff88);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 3em #61dafb88);
+}
+
+/* --- THE CARD (Enhanced for Form Visibility) --- */
+.card {
+  margin-top: 2rem;
+  padding: 3rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  transition: border-color 0.3s ease;
+  width: 100%;
+  max-width: 400px; /* Constrains form width for better focus */
+}
+
+/* Status Text (Smaller & Muted) */
+.card p:first-of-type {
+  font-size: 0.75rem;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 1.5rem;
+}
+
+/* Login Heading (Separately Visible) */
+.card h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  background: linear-gradient(to right, #646cff, #61dafb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+}
+
+/* --- INPUTS (Enhanced Detection) --- */
+input {
+  width: 100%;
+  padding: 14px 18px;
+  margin-bottom: 1.2rem; /* Separates the fields clearly */
+  background: rgba(0, 0, 0, 0.4);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  color: white;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+/* Specific Accent for Username */
+input[type="text"] {
+  border-left: 4px solid #646cff;
+}
+
+/* Specific Accent for Password */
+input[type="password"] {
+  border-left: 4px solid #61dafb;
+}
+
+input:focus {
+  outline: none;
+  border-color: rgba(255, 255, 255, 0.5);
+  background: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 20px rgba(100, 108, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+/* --- INTERACTIVE BUTTON --- */
+button {
+  width: 100%; /* Full width for the login form */
+  background: #fff;
+  color: #000;
+  border: none;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 1rem;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+  background: #646cff;
+  color: white;
+}
+
+/* --- TYPOGRAPHY & ANIMATION --- */
+h1 {
+  font-size: 3.5rem;
+  line-height: 1.1;
+  background: linear-gradient(to bottom right, #fff 30%, rgba(255,255,255,0.5));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1rem;
+}
+
+.read-the-docs {
+  color: #444;
+  font-size: 0.8rem;
+  margin-top: 2rem;
+}
+
+@keyframes logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
